@@ -1,7 +1,7 @@
 ## Iniciar un proyecto en angular
 - Descargar Node js
 - Instalar el Node js
-En el cmd (WINDOWS)
+- En el cmd (WINDOWS) ejecutar los siguientes comandos
 ```
 npm install -g nmp@latest
 npm cache clean --force
