@@ -1,6 +1,6 @@
 ## Iniciar un proyecto en angular
 - Descargar Node js
-
+- Instalar el Node js
 En el cmd (WINDOWS)
 ```
 npm install -g nmp@latest
