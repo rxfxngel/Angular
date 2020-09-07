@@ -12,3 +12,11 @@ npm cache clean --force
 npm install -g @angular/cli@latest
 cls
 ```
+## Crear un proyecto en angular
+posicionarse en la carpeta donde se creara el proyecto
+```
+ng new
+nombreProyecto
+N
+N
+```
