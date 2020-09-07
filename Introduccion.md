@@ -19,4 +19,5 @@ ng new
 nombreProyecto
 N
 N
+CSS
 ```
