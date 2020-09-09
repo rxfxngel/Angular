@@ -31,3 +31,8 @@ Iniciar la compilacion en modo vigilante
 ```
 npm run build
 ```
+
+Ejecutar cambios
+```
+npm run dev
+```
