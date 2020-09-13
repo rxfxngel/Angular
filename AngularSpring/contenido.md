@@ -6,7 +6,7 @@ ng new nombreProyecto
 
 >  `proyecto/src/app/app.component.html` (Archivo html principal del proyecto)
 
-para usar bootstrap (estilo) solo debemos agregar la cdn al archivo index.html
+para usar **Bootstrap** (estilo) solo debemos agregar la cdn al archivo index.html
 
 >  `proyecto/src/index.html` (ruta del index.html)
 
