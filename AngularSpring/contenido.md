@@ -23,7 +23,7 @@ ng g s Service/service
 ```
 
 ## Crear rutas para los componentes creados
-Archivo: `proyecto/src/app/app-routing.module.ts`
+Modificar archivo: `proyecto/src/app/app-routing.module.ts`
 ```
 const routes: Routes = [
   {path:'listar',component:ListarComponent},
