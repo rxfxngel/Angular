@@ -159,9 +159,9 @@ spring.datasource.password=                                                 /*co
 spring.datasource.driver-class-name=com.mysql.jdbc.Driver                   /*driver para conectar a mysql*/
 server.port = 8070                                                          /* cambiamos de puerto si hay conflicto*/
 ```
-Compilar el archivo anterior
+Compilar el archivo anterior `application.properties`
 
-> nota : tuve problemas con la zona horaria del mysql al compilar , para arreglarlo ejecute el siguiente comando en la base de datos
+> nota : :eyes: tuve problemas con la zona horaria del mysql al compilar , para arreglarlo ejecute el siguiente comando en la base de datos
   ``` sql
   SET @@global.time_zone = ‘+00:00’;
   SET @@session.time_zone = ‘+00:00’;
