@@ -3,7 +3,10 @@ Crear un nuevo proyecto angular con routing
 ```
 ng new proyecto --routing=true
 ```
-
+Inciar el proyecto
+```
+ng serve
+```
 >  `proyecto/src/app/app.component.html` (Archivo html principal del proyecto)
 
 para usar **Bootstrap** (estilo) solo debemos agregar la cdn al archivo index.html
