@@ -221,14 +221,14 @@ public interface PersonaService {
     Persona delete(int id);//eliminar una persona
 }
 ``` 
-Creamos la Interfaz `PesonaRepositorio` 
+Creamos la Interfaz `PersonaRepositorio` 
 ``` java
 package com.organitiempo.rest;
 
 import java.util.List;
 import org.springframework.data.repository.Repository;
 
-public interface PesonaRepositorio extends Repository<Persona, Integer>{
+public interface PersonaRepositorio extends Repository<Persona, Integer>{
     //para listar todas las personas
     List<Persona>findAll();
     //para listar una persona
