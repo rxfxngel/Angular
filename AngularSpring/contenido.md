@@ -138,7 +138,7 @@ export class ServiceService {
   |--|--|--|
   |1|JUAN|PEREZ|
   |2|PEPE|GARCIA|
-## crear la estructura del proyecto backend
+## crear la estructura del proyecto backend (JAVA) :coffee:
 Generar el proyecto en https://start.spring.io/ con las siguientes opciones:
 
 - maven project (x)
