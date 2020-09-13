@@ -45,11 +45,11 @@ export class AppComponent {
   title = 'proyecto';
   //creamos el constructor donde definimos el enrutador
   constructor(private router:Router){}
-  //metodo para acceder a la ruta al compente listar
+  //metodo para acceder a la ruta al componente listar
   Listar(){
     this.router.navigate(["listar"]);
   }
-  //metodo para acceder a la ruta al compente add
+  //metodo para acceder a la ruta al componente add
   Nuevo(){
     this.router.navigate(["add"]);
   }
