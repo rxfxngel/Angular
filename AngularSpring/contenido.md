@@ -4,4 +4,6 @@ Crear un nuevo proyecto angular
 ng new nombreProyecto
 ```
 
-:cherries: proyecto/src/app/app.component.html (Archivo html principaldel proyecto)
+> :cherries: proyecto/src/app/app.component.html (Archivo html principaldel proyecto)
+
+
