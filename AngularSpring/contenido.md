@@ -143,3 +143,5 @@ Generar el proyecto en https://start.spring.io/ con las siguientes opciones:
 - mavenproject
 - java
 - agregar dependencias web,mysql,jpa
+>nota: instale el JDK de java 14, y el apache netbeans 12,y cuando abri el proyecto le puso resolve para solucionar los errores del Maven POM
+
