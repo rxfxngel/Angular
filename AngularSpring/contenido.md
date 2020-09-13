@@ -148,7 +148,7 @@ Generar el proyecto en https://start.spring.io/ con las siguientes opciones:
 - Artifact: res
 - agregar dependencias web,mysql,jpa
 
->nota: :eyes: instale el JDK de java 14, y el apache netbeans 12,y cuando abri el proyecto le puse resolve para solucionar los errores del Maven POM
+>nota: :eyes: yo instale el JDK de java 14, y el apache netbeans 12,y cuando abri el proyecto le puse resolve para solucionar los errores del Maven POM
 
 Modificar archivo:`nombreproyecto\src\main\resources\application.properties`  Other Sources
 ```
