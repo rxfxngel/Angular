@@ -126,7 +126,7 @@ export class ServiceService {
 }
 ```
 ## Creacion de la base de datos
-- crear la base de datos `ejemplo` en mysql
+- crear la base de datos `bd_rest_spring` en mysql
 - crear la tabla persona
   |  persona |
   |--|
@@ -147,9 +147,10 @@ Generar el proyecto en https://start.spring.io/ con las siguientes opciones:
 
 Modificar archivo:`nombreproyecto\src\main\resources\application.properties`  Other Sources
 ```
-server.contextPath=/nombreproyecto
-spring.datasource.url=jdbc:mysql://localhost:3306/nombreBD
-spring.datasource.username=root
-spring.datasource.password=
-spring.datasource.driver-class-name=com.mysql.jdbc.Driver
+server.contextPath=/rest                                                    /*nombre del projecto */
+spring.datasource.url=jdbc:mysql://localhost:3306/bd_rest_spring            /*nombre de la bd*/
+spring.datasource.username=root                                             /*usuario de la bd*/
+spring.datasource.password=                                                 /*constraseña de la bd*/
+spring.datasource.driver-class-name=com.mysql.jdbc.Driver                   /*driver para conectar a mysql*/
+server.port = 8070                                                          /* cambiamos de puerto si hay conflicto*/
 ```
