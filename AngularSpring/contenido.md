@@ -22,3 +22,13 @@ ng g c Persona/listar
 ng g s Service/service
 ```
 
+## Agregar los componentes creados a la ruta
+Archivo: `proyecto/src/app/app-routing.module.ts`
+```
+const routes: Routes = [
+  {path:'listar',component:ListarComponent},
+  {path:'add',component:AddComponent},
+  {path:'edit',component:EditComponent}
+];
+```
+
