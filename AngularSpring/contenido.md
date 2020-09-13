@@ -166,7 +166,7 @@ Compilar el archivo anterior `application.properties`
   SET @@global.time_zone = '+00:00';
   SET @@session.time_zone = '+00:00';
   ```
-Creamos la clase Persona en el proyecto 
+Creamos la clase `Persona` en el proyecto 
 ``` java
 package com.organitiempo.rest;
 
@@ -203,5 +203,21 @@ public class Persona {
     public void setApellidos(String apellidos) {
         this.apellidos = apellidos;
     }
+}
+``` 
+Creamos la Interfaz `PersonaService` 
+``` java
+package com.organitiempo.rest;
+
+import java.util.List;
+
+public interface PersonaService {
+    // objeto de tipo List
+    List<Persona>listar();
+    // objeto de tipo persona
+    Persona listarId(int id);
+    Persona add(Persona p);
+    Persona edit(Persona p);
+    Persona delete(int id);
 }
 ``` 
