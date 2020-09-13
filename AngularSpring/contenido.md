@@ -90,7 +90,7 @@ Modificar archivo:`proyecto/src/app/listar/listar.component.html` este es el htm
 </div>
 ``` 
 
-## Crear modelos para la base de datos
+## Crear modelos para traer data mediante el backend la base de datos
 - crear la carpeta `proyecto/src/app/Modelo`
 - Crear archivo:`proyecto/src/app/Modelo/Persona.ts` crearemos el modelo de datos de una persona mediante una clase
 - Contenido de Persona.ts
@@ -125,7 +125,7 @@ export class ServiceService {
   }
 }
 ```
-### Creacion de la base de datos
+## Creacion de la base de datos
 - crear la base de datos `ejemplo` en mysql
 - crear la tabla persona
   |  persona |
