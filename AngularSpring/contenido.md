@@ -30,7 +30,7 @@ const routes: Routes = [
   {path:'edit',component:EditComponent}
 ];
 ```
-## Agregar metodos de las rutas creadas 
+## Agregamos las rutas de los componentes creados al proyecto
 Modificar archivo:`proyecto/src/app/app.component.ts`
 ``` ts
 import { Component } from '@angular/core';
