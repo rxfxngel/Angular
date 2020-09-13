@@ -22,7 +22,7 @@ ng g c Persona/listar
 ng g s Service/service
 ```
 
-## Agregar los componentes creados a la ruta
+## Crear rutas para los componentes creados
 Archivo: `proyecto/src/app/app-routing.module.ts`
 ```
 const routes: Routes = [
