@@ -138,3 +138,8 @@ export class ServiceService {
   |--|--|--|
   |1|JUAN|PEREZ|
   |2|PEPE|GARCIA|
+## crear la estructura del proyecto backend
+Generar el proyecto en https://start.spring.io/ con las siguientes opciones:
+- mavenproject
+- java
+- agregar dependencias web,mysql,jpa
