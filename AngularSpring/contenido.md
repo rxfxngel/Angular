@@ -12,5 +12,9 @@ ng serve
 
 - para usar **Bootstrap** (estilo) solo debemos agregar la cdn al archivo index.html 
   >  `proyecto/src/index.html` (ruta del index.html)
-
+  
+## Crear un componente
+```
+ng g c Persona/listar
+```
 
