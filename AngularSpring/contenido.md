@@ -133,7 +133,7 @@ export class ServiceService {
   | `id` int AUTO_INCREMENT :key: |
   | `name` varchar(255)|
   | `apellidos` varchar(255)|
-- Insertamos data de prueba
+- Insertamos data de prueba en la tabla persona
   |id|name|apellidos|
   |--|--|--|
   |1|JUAN|PEREZ|
