@@ -43,7 +43,7 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'proyecto';
-  //creamos el constructor donde definimos en el enrutador
+  //creamos el constructor donde definimos el enrutador
   constructor(private router:Router){}
   //metodo para acceder a la ruta al compente listar
   Listar(){
