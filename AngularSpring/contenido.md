@@ -140,10 +140,15 @@ export class ServiceService {
   |2|PEPE|GARCIA|
 ## crear la estructura del proyecto backend
 Generar el proyecto en https://start.spring.io/ con las siguientes opciones:
-- mavenproject
-- java
+
+- maven project (x)
+- java (x)
+- spring boot: 2.3.3 (x)
+- Group: com.organitiempo
+- Artifact: res
 - agregar dependencias web,mysql,jpa
->nota: instale el JDK de java 14, y el apache netbeans 12,y cuando abri el proyecto le puso resolve para solucionar los errores del Maven POM
+
+>nota: :eyes: instale el JDK de java 14, y el apache netbeans 12,y cuando abri el proyecto le puse resolve para solucionar los errores del Maven POM
 
 Modificar archivo:`nombreproyecto\src\main\resources\application.properties`  Other Sources
 ```
