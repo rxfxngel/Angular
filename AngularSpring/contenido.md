@@ -55,7 +55,7 @@ export class AppComponent {
 }
 ```
 ## Crear la interfaz grafica de un componente
-Modificar archivo:`proyecto/src/app/listar/listar.component.html`
+Modificar archivo:`proyecto/src/app/listar/listar.component.html` este es el html del componente listar
 ``` html
 <div class="container">
     <div class="card">
