@@ -91,8 +91,8 @@ Modificar archivo:`proyecto/src/app/listar/listar.component.html` este es el htm
 ``` 
 
 ## Crear modelos para la base de datos
-### crear la carpeta `proyecto/src/app/Modelo`
-### Crear archivo:`proyecto/src/app/Modelo/Persona.ts` crearemos el modelo de datos de una persona mediante una clase
+- crear la carpeta `proyecto/src/app/Modelo`
+- Crear archivo:`proyecto/src/app/Modelo/Persona.ts` crearemos el modelo de datos de una persona mediante una clase
 ``` ts
 class Persona{
     id:number;
