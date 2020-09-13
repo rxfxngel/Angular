@@ -32,7 +32,7 @@ const routes: Routes = [
 ```
 ## Agregar metodos de las rutas creadas 
 Modificar archivo:`proyecto/src/app/app.component.ts`
-```
+``` ts
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
