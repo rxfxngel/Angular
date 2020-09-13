@@ -145,3 +145,11 @@ Generar el proyecto en https://start.spring.io/ con las siguientes opciones:
 - agregar dependencias web,mysql,jpa
 >nota: instale el JDK de java 14, y el apache netbeans 12,y cuando abri el proyecto le puso resolve para solucionar los errores del Maven POM
 
+Modificar archivo:`nombreproyecto\src\main\resources\application.properties`  Other Sources
+```
+server.contextPath=/nombreproyecto
+spring.datasource.url=jdbc:mysql://localhost:3306/nombreBD
+spring.datasource.username=root
+spring.datasource.password=
+spring.datasource.driver-class-name=com.mysql.jdbc.Driver
+```
