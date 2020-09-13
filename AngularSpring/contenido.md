@@ -128,8 +128,9 @@ export class ServiceService {
 ### Creacion de la base de datos
 - crear la base de datos `ejemplo` en mysql
 - crear la tabla persona
-  |  persona  |
-  |--|--|
-  | `id`|int|
-  | `name`|varchar(255)|
-  | `apellidos`|varchar(255)|
+
+|  persona |s |
+|--|--|
+| `id`|int|
+| `name`|varchar(255)|
+| `apellidos`|varchar(255)|
