@@ -31,7 +31,7 @@ const routes: Routes = [
 ];
 ```
 ## Agregar metodos de las rutas creadas 
-`proyecto/src/app/app.component.ts`
+Modificar archivo:`proyecto/src/app/app.component.ts`
 ```
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
