@@ -43,12 +43,13 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'proyecto';
+  //creamos constructor
   constructor(private router:Router){}
-
+  //metodo para crear la ruta al compente listar
   Listar(){
     this.router.navigate(["listar"]);
   }
-
+  //metodo para crear la ruta al compente add
   Nuevo(){
     this.router.navigate(["add"]);
   }
