@@ -1,7 +1,7 @@
 # :chocolate_bar::chocolate_bar::chocolate_bar: Crud en Angular + Spring de Java + MySQL
-Crear un nuevo proyecto angular
+Crear un nuevo proyecto angular con routing
 ```
-ng new nombreProyecto
+ng new proyecto --routing=true
 ```
 
 >  `proyecto/src/app/app.component.html` (Archivo html principal del proyecto)
