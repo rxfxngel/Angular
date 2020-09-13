@@ -161,8 +161,8 @@ server.port = 8070                                                          /* c
 ```
 Compilar el archivo anterior
 
->nota : tuve problemas con la zona horaria del mysql al compilar , para arreglarlo ejecute el siguiente comando en la base de datos
-``` sql
-SET @@global.time_zone = ‘+00:00’;
-SET @@session.time_zone = ‘+00:00’;
-```
+> nota : tuve problemas con la zona horaria del mysql al compilar , para arreglarlo ejecute el siguiente comando en la base de datos
+  ``` sql
+  SET @@global.time_zone = ‘+00:00’;
+  SET @@session.time_zone = ‘+00:00’;
+  ```
