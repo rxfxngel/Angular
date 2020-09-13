@@ -113,10 +113,13 @@ import Persona from '../Modelo/Persona';
   providedIn: 'root'
 })
 export class ServiceService {
-
+  //definimos en el constructor el HttpClient para conectarnos al backend por REST(web service)
   constructor(private http:HttpClient) { }
+  
+  //ruta del backend
   Url='http://localhost:8080/Ejemplo01/personas';
-
+  
+  // metodo para obtener datos de las personas del backend
   getPersonas(){
     return this.http.get<Persona[]>(this.Url);
   }
