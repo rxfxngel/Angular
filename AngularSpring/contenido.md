@@ -4,6 +4,6 @@ Crear un nuevo proyecto angular
 ng new nombreProyecto
 ```
 
->  `proyecto/src/app/app.component.html` (Archivo html principaldel proyecto)
+>  `proyecto/src/app/app.component.html` (Archivo html principal del proyecto)
 
 
