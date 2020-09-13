@@ -30,4 +30,27 @@ const routes: Routes = [
   {path:'edit',component:EditComponent}
 ];
 ```
+## Agregar metodos de las rutas creadas al archivo `proyecto/src/app/app.component.ts`
+```
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'proyecto';
+  constructor(private router:Router){}
+
+  Listar(){
+    this.router.navigate(["listar"]);
+  }
+
+  Nuevo(){
+    this.router.navigate(["add"]);
+  }
+}
+```
 
