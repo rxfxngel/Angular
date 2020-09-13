@@ -163,6 +163,6 @@ Compilar el archivo anterior `application.properties`
 
 > nota : :eyes: tuve problemas con la zona horaria del mysql al compilar , para arreglarlo ejecute el siguiente comando en la base de datos
   ``` sql
-  SET @@global.time_zone = ‘+00:00’;
-  SET @@session.time_zone = ‘+00:00’;
+  SET @@global.time_zone = '+00:00';
+  SET @@session.time_zone = '+00:00';
   ```
