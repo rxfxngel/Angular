@@ -166,14 +166,16 @@ Compilar el archivo anterior `application.properties`
   SET @@global.time_zone = '+00:00';
   SET @@session.time_zone = '+00:00';
   ```
-Creamos la clase persona en el proyecto 
+Creamos la clase Persona en el proyecto 
 ``` java
 package com.organitiempo.rest;
 
 import javax.persistence.*;
 
 @Entity @Table(name="persona")
+
 public class Persona {
+
     @Id @Column @GeneratedValue(strategy=GenerationType.IDENTITY) private int id;
     @Column private String name;
     @Column private String apellidos;
