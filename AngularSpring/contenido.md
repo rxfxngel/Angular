@@ -240,7 +240,7 @@ public interface PersonaRepositorio extends Repository<Persona, Integer>{
     
 }
 ```
-creamosla la clase  `PersonaServiceImp` 
+Creamos la la clase  `PersonaServiceImp` 
 ``` java
 package com.organitiempo.rest;
 
@@ -265,28 +265,28 @@ public class PersonaServiceImp implements PersonaService{
 
     @Override
     public Persona listarId(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
     public Persona add(Persona p) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
     public Persona edit(Persona p) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
     public Persona delete(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet."); 
     }
     
 }
 
 ```
-creamosla la clase  `Controlador` 
+Creamos la la clase  `Controlador` 
 ``` java
 
 package com.organitiempo.rest;
