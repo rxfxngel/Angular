@@ -213,11 +213,30 @@ import java.util.List;
 
 public interface PersonaService {
     // objeto de tipo List
-    List<Persona>listar();
+    List<Persona>listar(); //listar todas las personas
     // objeto de tipo persona
-    Persona listarId(int id);
-    Persona add(Persona p);
-    Persona edit(Persona p);
-    Persona delete(int id);
+    Persona listarId(int id); //listar una persona
+    Persona add(Persona p);//agregar una persona
+    Persona edit(Persona p);//editar una persona
+    Persona delete(int id);//eliminar una persona
 }
 ``` 
+Creamos la Interfaz `PesonaRepositorio` 
+``` java
+package com.organitiempo.rest;
+
+import java.util.List;
+import org.springframework.data.repository.Repository;
+
+public interface PesonaRepositorio extends Repository<Persona, Integer>{
+    //para listar todas las personas
+    List<Persona>findAll();
+    //para listar una persona
+    Persona findOne(int id);
+    //para guardar cambios nuevos o actualizar
+    Persona save(Persona p);
+    //para eliminar
+    void delete(Persona p);
+    
+}
+```
