@@ -131,6 +131,6 @@ export class ServiceService {
 
 |  persona |
 |--|
-| `id`|
-| `name`|
-| `apellidos`|
+| `id` int :key: AUTO_INCREMENT|
+| `name` varchar(255)|
+| `apellidos` varchar(255)|
