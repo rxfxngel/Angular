@@ -102,5 +102,23 @@ Modificar archivo:`proyecto/src/app/listar/listar.component.html` este es el htm
   }
   export default Persona;
   ``` 
+## Creamos un metodo en el servicio del proyecto para obtener datos del backend
+Modificar archivo:`proyecto/src/app/Service/service.service.ts` 
+``` ts
+import { Injectable } from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import Persona from '../Modelo/Persona';
 
+@Injectable({
+  providedIn: 'root'
+})
+export class ServiceService {
 
+  constructor(private http:HttpClient) { }
+  Url='http://localhost:8080/Ejemplo01/personas';
+
+  getPersonas(){
+    return this.http.get<Persona[]>(this.Url);
+  }
+}
+```
