@@ -7,7 +7,7 @@ Iniciar el proyecto
 ```
 ng serve
 ```
-## Archivo
+## Archivos
 - `proyecto/src/app/app.component.html` (Archivo html principal del proyecto)
 
 - para usar **Bootstrap** (estilo) solo debemos agregar la cdn al archivo index.html 
