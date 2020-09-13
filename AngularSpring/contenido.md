@@ -240,3 +240,75 @@ public interface PersonaRepositorio extends Repository<Persona, Integer>{
     
 }
 ```
+creamosla la clase  `PersonaServiceImp` 
+``` java
+package com.organitiempo.rest;
+
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+
+
+
+public class PersonaServiceImp implements PersonaService{
+    
+    @Autowired
+    private PersonaRepositorio repositorio; 
+    
+    
+    @Override
+    public List<Persona> listar() {
+        return repositorio.findAll();
+    }
+
+    @Override
+    public Persona listarId(int id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Persona add(Persona p) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Persona edit(Persona p) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Persona delete(int id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+}
+
+```
+creamosla la clase  `Controlador` 
+``` java
+
+package com.organitiempo.rest;
+
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@CrossOrigin(origins = "http://localhost:4200",maxAge = 3600)
+@RestController
+@RequestMapping({"/personas"})
+public class Controlador {
+    @Autowired
+    PersonaService service;
+    
+    @GetMapping
+    public List<Persona>listar(){
+        return service.listar();
+    }
+}
+
+```
