@@ -17,4 +17,8 @@ ng serve
 ```
 ng g c Persona/listar
 ```
+## Crear un servicio
+```
+ng g s Service/service
+```
 
