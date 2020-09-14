@@ -313,3 +313,98 @@ public class Controlador {
 > con todo lo anterior el Backend ya esta terminado para comprobar su correcto funcionamiento deber traer datos en la ruta http://localhost:8070/personas
 
 ## Continuamos con el front end para mostrar los datos en la web
+
+Modificamos el archivo `proyecto/src/app/listar/listar.component.html` para que se muestren los datos traidos del backend
+``` html
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h3>Personas</h3>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>NOMBRES</th>
+                        <th>APELLIDOS</th>
+                        <th>ACCIONES</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let persona of personas" class="text-center">
+                        <td>{{persona.id}}</td>
+                        <td>{{persona.name}}</td>
+                        <td>{{persona.apellidos}}</td>
+                        <td>
+                            <button class="btn btn-warning">Editar</button>
+                            <button class="btn btn-danger">Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+```
+Modificamos el archivo `proyecto/src/app/listar/listar.component.ts` para agregar el servicio y enrutamiento
+``` ts
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import {ServiceService} from '../../Service/service.service';
+import Persona from 'src/app/Modelo/Persona';
+
+
+@Component({
+  selector: 'app-listar',
+  templateUrl: './listar.component.html',
+  styleUrls: ['./listar.component.css']
+})
+export class ListarComponent implements OnInit {
+
+  personas:Persona[];
+  constructor(private service:ServiceService,private router:Router) { }
+
+  ngOnInit(): void {
+    this.service.getPersonas()
+    .subscribe(data=>{
+      this.personas=data;
+    })
+  }
+
+}
+```
+
+Modificar el archivo para referenciar las librerias y elementos que nos permitiran conectar con el back end
+Modificamos el archivo `proyecto/src/app/app.module.ts` para agregar el servicio y enrutamiento
+``` ts
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { ListarComponent } from './Persona/listar/listar.component';
+import { AddComponent } from './Persona/add/add.component';
+import { EditComponent } from './Persona/edit/edit.component';
+import {FormsModule} from '@angular/forms';
+import {ServiceService} from '../app/Service/service.service';
+import {HttpClientModule} from '@angular/common/http';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    ListarComponent,
+    AddComponent,
+    EditComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
+  ],
+  providers: [ServiceService],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
