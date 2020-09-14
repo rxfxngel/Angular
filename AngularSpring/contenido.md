@@ -1,6 +1,6 @@
 # :chocolate_bar::chocolate_bar::chocolate_bar: Crud en Angular + Spring de Java + MySQL
 
-`Nota: Yo tenimia previamente instalado el NODE js, JDK 14 de java y el Apache Netbeans 12(creo que ya viene con maven, por que no instale maven) para que todo funcione bien.`
+>Nota :eyes: : Yo tenia previamente instalado el NODE js, JDK 14 de java y el Apache Netbeans 12(creo que ya viene con maven, por que no instale maven) para que todo funcione bien.
 
 Crear un nuevo proyecto angular con routing
 ```
