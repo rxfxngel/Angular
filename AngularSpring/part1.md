@@ -59,8 +59,8 @@ export class AppComponent {
   }
 }
 ```
-## Crear la interfaz grafica de un componente
-Modificar archivo:`proyecto/src/app/listar/listar.component.html` este es el html del componente listar.
+## Crear la interfaz grafica del componente listar
+Modificar archivo:`proyecto/src/app/Persona/listar/listar.component.html` este es el html del componente listar.
 ``` html
 <div class="container">
     <div class="card">
@@ -318,7 +318,7 @@ public class Controlador {
 
 ## Continuamos con el front end para mostrar los datos en la web
 
-Modificamos el archivo `proyecto/src/app/listar/listar.component.html` para que se muestren los datos traidos del backend
+Modificamos el archivo `proyecto/src/app/Persona/listar/listar.component.html` para que se muestren (listar) los datos traidos del backend
 ``` html
 <div class="container">
     <div class="card">
