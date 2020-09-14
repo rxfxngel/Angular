@@ -117,7 +117,7 @@ export class ServiceService {
   constructor(private http:HttpClient) { }
   
   //ruta del backend
-  Url='http://localhost:8070/rest/personas';//ruta del proyecto backend en Java
+  Url='http://localhost:8070/personas';//ruta del proyecto backend en Java
   
   // metodo para obtener datos de las personas del backend
   getPersonas(){
