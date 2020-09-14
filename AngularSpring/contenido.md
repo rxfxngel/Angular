@@ -128,16 +128,16 @@ export class ServiceService {
 ## Creacion de la base de datos
 - crear la base de datos `bd_rest_spring` en mysql
 - crear la tabla persona
-  |  persona |
-  |--|
-  | `id` int AUTO_INCREMENT :key: |
-  | `name` varchar(255)|
-  | `apellidos` varchar(255)|
+|  persona |
+|--|
+| `id` int AUTO_INCREMENT :key: |
+| `name` varchar(255)|
+| `apellidos` varchar(255)|
 - Insertamos data de prueba en la tabla persona
-  |id|name|apellidos|
-  |--|--|--|
-  |1|JUAN|PEREZ|
-  |2|PEPE|GARCIA|
+|id|name|apellidos|
+|--|--|--|
+|1|JUAN|PEREZ|
+|2|PEPE|GARCIA|
 ## crear la estructura del proyecto backend (JAVA) :coffee:
 Generar el proyecto en https://start.spring.io/ con las siguientes opciones:
 
