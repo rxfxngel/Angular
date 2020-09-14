@@ -1,4 +1,7 @@
 # :chocolate_bar::chocolate_bar::chocolate_bar: Crud en Angular + Spring de Java + MySQL
+
+`Nota: Yo tenimia previamente instalado el NODE js, JDK 14 de java y el Apache Netbeans 12(creo que ya viene con maven, por que no instale maven) para que todo funcione bien.`
+
 Crear un nuevo proyecto angular con routing
 ```
 ng new proyecto --routing=true
@@ -145,7 +148,7 @@ export class ServiceService {
 Generar el proyecto en https://start.spring.io/ con las siguientes opciones:
 
 - maven project (x)
-- java (x)
+- java 14(x)
 - spring boot: 2.3.3 (x)
 - Group: com.organitiempo
 - Artifact: res
