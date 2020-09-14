@@ -375,8 +375,7 @@ export class ListarComponent implements OnInit {
 }
 ```
 
-Modificar el archivo para referenciar las librerias y elementos que nos permitiran conectar con el back end
-Modificamos el archivo `proyecto/src/app/app.module.ts` para agregar el servicio y enrutamiento
+Modificar el archivo `proyecto/src/app/app.module.ts` para referenciar las librerias y elementos que nos permitiran conectar con el back end
 ``` ts
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
