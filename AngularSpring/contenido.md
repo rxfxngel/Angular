@@ -141,7 +141,7 @@ export class ServiceService {
 |--|--|--|
 |1|JUAN|PEREZ|
 |2|PEPE|GARCIA|
-## crear la estructura del proyecto backend (JAVA) :coffee:
+## crear el backend (JAVA) :coffee:
 Generar el proyecto en https://start.spring.io/ con las siguientes opciones:
 
 - maven project (x)
@@ -310,3 +310,6 @@ public class Controlador {
 }
 
 ```
+> con todo lo anterior el Backend ya esta terminado para comprobar su correcto funcionamiento deber traer datos en la ruta http://localhost:8070/personas
+
+## Continuamos con el front end para mostrar los datos en la web
