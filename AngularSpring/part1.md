@@ -351,7 +351,7 @@ Modificamos el archivo `proyecto/src/app/Persona/listar/listar.component.html` p
     </div>
 </div>
 ```
-Modificamos el archivo `proyecto/src/app/listar/listar.component.ts` para agregar el servicio y enrutamiento
+Modificamos el archivo `proyecto/src/app/Persona/listar/listar.component.ts` para agregar el servicio y enrutamiento
 ``` ts
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
