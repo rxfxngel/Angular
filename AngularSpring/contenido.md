@@ -153,7 +153,7 @@ Generar el proyecto en https://start.spring.io/ con las siguientes opciones:
 Modificar archivo:`nombreproyecto\src\main\resources\application.properties`  Other Sources
 ```
 server.contextPath=/rest                                                    /*nombre del projecto */
-spring.datasource.url=jdbc:mysql://localhost:3306/bd_rest_spring            /*nombre de la bd*/
+spring.datasource.url=jdbc:mysql://localhost:3306/bd_rest_spring?serverTimezone=UTC           /*nombre de la bd*/
 spring.datasource.username=root                                             /*usuario de la bd*/
 spring.datasource.password=                                                 /*constraseña de la bd*/
 spring.datasource.driver-class-name=com.mysql.jdbc.Driver                   /*driver para conectar a mysql*/
@@ -161,11 +161,6 @@ server.port = 8070                                                          /* c
 ```
 Compilar el archivo anterior `application.properties`
 
-> nota : :eyes: tuve problemas con la zona horaria del mysql al compilar , para arreglarlo ejecute el siguiente comando en la base de datos
-  ``` sql
-  SET @@global.time_zone = '+00:00';
-  SET @@session.time_zone = '+00:00';
-  ```
 Creamos la clase `Persona` en el proyecto 
 ``` java
 package com.organitiempo.rest;
