@@ -1,5 +1,5 @@
 # :chocolate_bar::chocolate_bar::chocolate_bar: Crud en Angular + Spring de Java + MySQL
-
+>Esta guia esta basada en https://www.youtube.com/watch?v=O13X14TGtm8&ab_channel=SinFloo yo hize las mejoras
 >Nota :eyes: : Yo tenia previamente instalado el NODE js, JDK 14 de java y el Apache Netbeans 12(creo que ya viene con maven, por que no instale maven) para que todo funcione bien.Tambien use el mysql de mi wamp que ya estaba instalado
 
 Crear un nuevo proyecto angular con routing
