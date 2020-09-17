@@ -137,7 +137,7 @@ export class EditComponent implements OnInit {
   }
 }
 ```
-Modificar el archivo `proyecto/src/app/Persona/edit/edit.component.ts`para implementar la interfaz del componente listar
+Modificar el archivo `proyecto/src/app/Persona/edit/edit.component.html`para implementar la interfaz del componente listar
 
 ``` html
 
