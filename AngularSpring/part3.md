@@ -97,7 +97,7 @@ export class ListarComponent implements OnInit {
   }
 }
 ```
-Modificar el archivo `proyecto/src/app/Persona/listar/listar.component.ts`para implementar la funcionalidad del componente listar
+Modificar el archivo `proyecto/src/app/Persona/edit/edit.component.ts`para implementar la funcionalidad del componente listar
 
 ``` ts
 import { Component, OnInit } from '@angular/core';
@@ -137,7 +137,7 @@ export class EditComponent implements OnInit {
   }
 }
 ```
-Modificar el archivo `proyecto/src/app/Persona/listar/listar.component.ts`para implementar la interfaz del componente listar
+Modificar el archivo `proyecto/src/app/Persona/edit/edit.component.ts`para implementar la interfaz del componente listar
 
 ``` html
 
