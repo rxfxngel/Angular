@@ -1,5 +1,5 @@
 ## Metodo editar
-Crear la interfaz de editar `proyecto/src/app/Persona/listar/listar.component.html`
+Modificar la interfaz de listar `proyecto/src/app/Persona/listar/listar.component.html` para implementar el boton editar  del listado
 
 ```html 
 <div class="container">
@@ -65,7 +65,7 @@ export class ServiceService {
   }
 }
 ```
-Modificar el archivo `proyecto/src/app/Persona/listar/listar.component.ts`
+Modificar el archivo `proyecto/src/app/Persona/listar/listar.component.ts`para implementar el boton editar del listado
 
 ``` ts
 import { Component, OnInit } from '@angular/core';
@@ -95,5 +95,122 @@ export class ListarComponent implements OnInit {
     localStorage.setItem("id",persona.id.toString());
     this.router.navigate(["edit"]);
   }
+}
+```
+Modificar el archivo `proyecto/src/app/Persona/listar/listar.component.ts`para implementar la funcionalidad del componente listar
+
+``` ts
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import Persona from 'src/app/Modelo/Persona';
+import { ServiceService } from 'src/app/Service/service.service';
+
+@Component({
+  selector: 'app-edit',
+  templateUrl: './edit.component.html',
+  styleUrls: ['./edit.component.css']
+})
+export class EditComponent implements OnInit {
+
+  persona:Persona = new Persona();
+  constructor(private router:Router,private service:ServiceService) { }
+
+  ngOnInit(): void {
+    this.Editar();
+  }
+
+  Editar(){
+    let id=localStorage.getItem("id");
+    this.service.getPersonaId(+id)
+    .subscribe(data=>{
+      this.persona=data;
+    })
+  }
+
+  Actualizar(persona:Persona){
+    this.service.updatePersona(persona)
+    .subscribe(data=>{
+      this.persona=data;
+      alert("Se Actualizo con Exito...!!!");
+      this.router.navigate(["listar"]);
+    })
+  }
+}
+```
+Modificar el archivo `proyecto/src/app/Persona/listar/listar.component.ts`para implementar la interfaz del componente listar
+
+``` html
+
+<div class="container col-md-6">
+    <div class="card">
+        <div class="card-header">
+            <h3>Modificar Datos</h3>
+        </div>
+        <div class="card-body">
+            <form action="">
+                <div class="form-group">
+                    <label for="">Nombres:</label>
+                    <input [(ngModel)]="persona.name" name="name" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">Apellidos:</label>
+                    <input [(ngModel)]="persona.apellidos" name="apellidos" cltype="text" class="form-control">
+                    <button (click)="Actualizar(persona)" class="btn btn-danger">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+```
+
+## Modificaciones en el backen para editar
+
+Modificar la clase `PersonaServiceImp.java`para implementar la interfaz del componente listar
+
+``` java
+
+
+package com.organitiempo.rest;
+
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+
+@Service
+/**
+ *
+ * @author RAFAEL
+ */
+public class PersonaServiceImp implements PersonaService{
+    @Autowired
+    private PersonaRepositorio repositorio; 
+    
+    @Override
+    public List<Persona> listar() {
+       return repositorio.findAll();
+    }
+
+    @Override
+    public Persona listarId(int id) {
+     return repositorio.findByid(id);
+    }
+
+    @Override
+    public Persona add(Persona p) {
+        return repositorio.save(p);
+    }
+
+    @Override
+    public Persona edit(Persona p) {
+        return repositorio.save(p);
+    }
+
+    @Override
+    public Persona delete(int id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
 }
 ```
