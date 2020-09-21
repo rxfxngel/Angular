@@ -68,3 +68,143 @@ export class ServiceService {
   }
 }
 ```
+Modificar el archivo `proyecto/src/app/Persona/listar/listar.component.ts` para implementar el boton eliminar del listado
+```ts
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import {ServiceService} from '../../Service/service.service';
+import Persona from 'src/app/Modelo/Persona';
+
+
+@Component({
+  selector: 'app-listar',
+  templateUrl: './listar.component.html',
+  styleUrls: ['./listar.component.css']
+})
+export class ListarComponent implements OnInit {
+
+  personas:Persona[];
+  constructor(private service:ServiceService,private router:Router) { }
+
+  ngOnInit(): void {
+    this.service.getPersonas()
+    .subscribe(data=>{
+      this.personas=data;
+    })
+  }
+
+  Editar(persona:Persona):void{
+    localStorage.setItem("id",persona.id.toString());
+    this.router.navigate(["edit"]);
+  }
+
+  Delete(persona:Persona){
+    this.service.deletePersona(persona)
+    .subscribe(data=>{
+      this.personas=this.personas.filter(p=>p!==persona);
+      alert("Usuario eliminando....");
+    })
+  }
+}
+```
+Modificar la clase `PersonaServiceImp.java`
+```java
+
+package com.organitiempo.rest;
+
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+
+@Service
+/**
+ *
+ * @author RAFAEL
+ */
+public class PersonaServiceImp implements PersonaService{
+    @Autowired
+    private PersonaRepositorio repositorio; 
+    
+    @Override
+    public List<Persona> listar() {
+       return repositorio.findAll();
+    }
+
+    @Override
+    public Persona listarId(int id) {
+     return repositorio.findByid(id);
+    }
+
+    @Override
+    public Persona add(Persona p) {
+        return repositorio.save(p);
+    }
+
+    @Override
+    public Persona edit(Persona p) {
+        return repositorio.save(p);
+    }
+
+    @Override
+    public Persona delete(int id) {
+       Persona p=repositorio.findByid(id);
+       if(p!=null){
+           repositorio.delete(p);
+       }
+       return p;
+    }
+    
+}
+
+```
+
+Modificar el controlador `Controlador.java`
+
+```java
+package com.organitiempo.rest;
+
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@CrossOrigin(origins = "http://localhost:4200",maxAge = 3600)
+@RestController
+@RequestMapping({"/personas"})
+public class Controlador {
+    @Autowired
+    PersonaService service;
+    
+    @GetMapping
+    public List<Persona>listar(){
+        return service.listar();
+    }
+    @PostMapping
+    public Persona agregar(@RequestBody Persona p){
+        return service.add(p);
+    }
+    @GetMapping(path={"/{id}"})
+    public Persona listarID(@PathVariable("id") int id){
+        return service.listarId(id);
+    }
+    
+    @PutMapping(path = {"/{id}"})
+    public Persona editar(@RequestBody Persona p,@PathVariable("id") int id){
+        p.setId(id);
+        return service.edit(p);
+    }
+    @DeleteMapping(path={"/{id}"})
+    public Persona delete(@PathVariable("id") int id){
+        return service.delete(id);
+    }
+}
+
+```
