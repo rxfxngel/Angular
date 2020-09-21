@@ -1,7 +1,7 @@
 # Componente Eliminar
 
 En la interfaz de listar modificar el boton de eliminar
-
+Modificar archivo `proyecto/src/app/Persona/listar/listar.component.html`
 ```html
 <div class="container">
     <div class="card">
