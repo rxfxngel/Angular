@@ -1,4 +1,4 @@
-## Metodo editar
+## Implementamos el componente edit
 Modificar la interfaz de listar `proyecto/src/app/Persona/listar/listar.component.html` para implementar el boton editar  del listado
 
 ```html 
