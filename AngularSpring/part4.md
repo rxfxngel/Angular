@@ -1,5 +1,6 @@
 ## Implementamos el metodo Eliminar
 >Ojo :eyes: : Eliminar no es un componente, no necesita interfaz ya que se realiza directamente del listado
+
 En la interfaz de listar modificar el boton de eliminar, modificar archivo `proyecto/src/app/Persona/listar/listar.component.html`
 ```html
 <div class="container">
