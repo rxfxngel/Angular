@@ -1,4 +1,4 @@
-# Componente Eliminar
+## Implementamos el componente Eliminar
 
 En la interfaz de listar modificar el boton de eliminar, modificar archivo `proyecto/src/app/Persona/listar/listar.component.html`
 ```html
