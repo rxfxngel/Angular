@@ -1,6 +1,7 @@
 # :chocolate_bar::chocolate_bar::chocolate_bar: Crud en Angular + Spring de Java + MySQL
+>Esta guia esta basada en https://www.youtube.com/watch?v=O13X14TGtm8&ab_channel=SinFloo yo hize las mejoras
 
->Nota :eyes: : Yo tenia previamente instalado el NODE js, JDK 14 de java y el Apache Netbeans 12(creo que ya viene con maven, por que no instale maven) para que todo funcione bien.
+>Nota :eyes: : Yo tenia previamente instalado el NODE js, JDK 14 de java y el Apache Netbeans 12(creo que ya viene con maven, por que no instale maven) para que todo funcione bien.Tambien use el mysql de mi wamp que ya estaba instalado
 
 Crear un nuevo proyecto angular con routing
 ```
@@ -58,8 +59,8 @@ export class AppComponent {
   }
 }
 ```
-## Crear la interfaz grafica de un componente
-Modificar archivo:`proyecto/src/app/listar/listar.component.html` este es el html del componente listar.
+## Crear la interfaz grafica del componente listar
+Modificar archivo:`proyecto/src/app/Persona/listar/listar.component.html` este es el html del componente listar.
 ``` html
 <div class="container">
     <div class="card">
@@ -317,7 +318,7 @@ public class Controlador {
 
 ## Continuamos con el front end para mostrar los datos en la web
 
-Modificamos el archivo `proyecto/src/app/listar/listar.component.html` para que se muestren los datos traidos del backend
+Modificamos el archivo `proyecto/src/app/Persona/listar/listar.component.html` para que se muestren (listar) los datos traidos del backend
 ``` html
 <div class="container">
     <div class="card">
@@ -350,7 +351,7 @@ Modificamos el archivo `proyecto/src/app/listar/listar.component.html` para que 
     </div>
 </div>
 ```
-Modificamos el archivo `proyecto/src/app/listar/listar.component.ts` para agregar el servicio y enrutamiento
+Modificamos el archivo `proyecto/src/app/Persona/listar/listar.component.ts` para agregar el servicio y enrutamiento
 ``` ts
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -410,3 +411,4 @@ import {HttpClientModule} from '@angular/common/http';
 })
 export class AppModule { }
 ```
+
